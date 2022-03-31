@@ -73,14 +73,18 @@ SELECT cl.birth_year,
 INTO dim_clients
 FROM salesdataset AS cl
 ORDER BY client_name;
+ALTER TABLE dim_clients 
+ADD COLUMN id_client uuid DEFAULT uuid_generate_v4 ();
 
-SELECT region, 
+SELECT product_category, 
        product_container, 
        product_name,
-			 product_subcategory
-INTO dim_product
+	   product_subcategory
+INTO products
 FROM salesdataset
 ORDER BY product_category;
+ALTER TABLE products 
+ADD COLUMN id_product uuid DEFAULT uuid_generate_v4 ();
 
 SELECT region, 
        state, 
@@ -88,6 +92,8 @@ SELECT region,
 INTO dim_store
 FROM salesdataset
 ORDER BY zip_code;
+ALTER TABLE dim_store 
+ADD COLUMN id_product uuid DEFAULT uuid_generate_v4 ();
 
 -- table as Date
 id
