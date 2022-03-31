@@ -2,7 +2,6 @@
 ## Contents
 
 - [Overview of Project](#overview-of-project)
-  * [Project Topic](#project-topic)
   * [Project Goals](#project-goals)
   * [Data Source](#data-source)
   
@@ -14,4 +13,9 @@
   * [Dashboard](#dashboard)
 
 ## Overview of Project
+
+The data used for the project was collected from the data.world site.
+
+
+
 
